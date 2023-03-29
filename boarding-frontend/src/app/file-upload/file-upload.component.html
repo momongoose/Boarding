@@ -1,0 +1,46 @@
+<div class="container">
+  <button
+    class="undo1"
+    (click)="Undo3()"
+    *ngIf="on == 2 || off == 2 || off == 4"
+  >
+    Zurück
+  </button>
+
+  <h1 *ngIf="on == 2">Onboarding<br />Bitte nur Excel Dateien auswählen!</h1>
+  <h1 *ngIf="off == 2">Offboarding<br />Bitte nur Excel Dateien auswählen!</h1>
+  <h1 *ngIf="off == 4">
+    Übergabeprotokolle<br />Bitte nur PDF Dateien auswählen!
+  </h1>
+
+  <input
+    type="file"
+    class="file-input"
+    (change)="onFileSelected($event)"
+    #fileUpload
+  />
+  <div class="fu">
+    <div class="file-upload">
+      {{ fileName || "Keine Datei ausgewählt" }}
+
+      <button
+        mat-mini-fab
+        color="primary"
+        class="upload-btn"
+        (click)="fileUpload.click()"
+      >
+        <mat-icon>attach_file</mat-icon>
+      </button>
+    </div>
+  </div>
+  <img src="assets/images/pdf.png" width="40%" class="img1" *ngIf="off == 4" />
+  <img src="assets/images/excel.png" width="40%" class="img1" *ngIf="on == 2 || off == 2" />
+  <div class="best" *ngIf="fin == true">
+    <h1 class="besttxt">Übergabe war Erfolgreich!</h1>
+    <mat-progress-bar
+      class="bar"
+      mode="determinate"
+      [value]="count"
+    ></mat-progress-bar>
+  </div>
+</div>

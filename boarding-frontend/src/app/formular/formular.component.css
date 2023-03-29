@@ -1,0 +1,281 @@
+
+.btn1 {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  font-size: 44px;
+}
+
+.btn2 {
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  font-size: 44px;
+}
+
+.csv {
+  margin: auto;
+  position: relative;
+  top: 25vh;
+}
+
+.undo {
+  font-size: 28px;
+  position: relative;
+  left: 3vw;
+  top: 3vh;
+}
+
+button {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  color: white;
+}
+
+button:hover {
+  transition: ease-in 0.35s;
+  background-color: #2fa2ff;
+  border-color: rgb(1, 1, 1);
+}
+
+.OnForm {
+  text-align: center;
+}
+
+.OffForm {
+  text-align: center;
+}
+
+.undo1 {
+  font-size: 28px;
+  position: fixed;
+  left: 3vw;
+  top: 3vh;
+}
+
+.undo2 {
+  font-size: 28px;
+  position: fixed;
+  left: 3vw;
+  top: 3vh;
+}
+
+.sub1 {
+  font-size: 30px;
+}
+
+.sub2 {
+  font-size: 30px;
+}
+
+mat-form-field {
+  font-size: 24px;
+  width: 30vw;
+  background-color: #FFF;
+}
+
+.bg1 {
+  position: relative;
+  margin: auto;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+}
+
+.lifelog{
+  margin: auto;
+  border-radius: 1px;
+  border: 2px solid #000000;
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.lifebox{
+  padding: 4% 2% 4% 2%;
+  margin-right: 10%;
+  font-size: 22px;
+}
+
+.logbox{
+  padding: 4% 2% 4% 2%;
+  margin-left: 10%;
+  font-size: 22px;
+}
+
+h1 {
+  position: relative;
+  top: -10vh;
+}
+
+.x {
+  padding-right: 2vw;
+  color: red;
+  font-size: 50px;
+}
+
+.xo {
+  position: absolute;
+  right: 30vw;
+  bottom: 10.5vh;
+  color: red;
+  font-size: 50px;
+}
+
+.jo {
+  position: absolute;
+  right: 30vw;
+  bottom: 10.5vh;
+  color: rgb(27, 192, 27);
+  font-size: 50px;
+}
+
+.j {
+  padding-right: 2vw;
+  color: rgb(27, 192, 27);
+  font-size: 50px;
+}
+
+.hardI2 {
+  display: inline-block;
+}
+
+.hardware-section {
+  display: table-row;
+  margin: auto;
+  width: 30vw;
+  padding-bottom: 2vh;
+  font-size: 20px;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #2fa2ff !important;
+ }
+
+ ::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #2fa2ff !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: #2fa2ff !important;;
+}
+
+.hardware-section2 {
+  display: table-row;
+  margin: auto;
+  width: 30vw;
+  padding-bottom: 2vh;
+  font-size: 20px;
+}
+
+.hardware-section3 {
+  display: table-row;
+  margin: auto;
+  width: 30vw;
+  padding-bottom: 2vh;
+  font-size: 20px;
+}
+
+::ng-deep .mat-checkbox-ripple .mat-ripple-element {
+  background-color: #2fa2ff !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #2fa2ff !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+	opacity: 0.1 !important;     /*click effect color change*/
+	background-color: #2fa2ff !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+	background-color: #2fa2ff !important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+	border-color:#2fa2ff !important; /*outer ring color change*/
+}
+
+.kekbox2 {
+  display: table-cell;
+}
+
+.kekbox5 {
+  position: relative;
+  left: 10vw;
+}
+
+.bar {
+  position: relative;
+  top: -3.5vh;
+}
+
+.best {
+  position: relative;
+  top: 2vh;
+  margin: auto;
+  width: 80%;
+  color: #000000;
+  background-color: rgb(137, 248, 137);
+  border-radius: 40px;
+  padding-top: 3vh;
+  padding-bottom: -1vh;
+}
+
+@media (max-width:1900px) {
+  .bg1 {
+    position: relative;
+    top: 0vh;
+    margin: auto;
+    width: 40%;
+    background-color: white;
+    border-radius: 40px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .xo {
+    position: absolute;
+    right: 30vw;
+    bottom: 20.5vh;
+    color: red;
+    font-size: 50px;
+  }
+
+  .jo {
+    position: absolute;
+    right: 30vw;
+    bottom: 20.5vh;
+    color: rgb(27, 192, 27);
+    font-size: 50px;
+  }
+}
+
+h1 {
+  position: relative;
+  top: -2vh;
+}
+
+.bg2 {
+  position: relative;
+  top: 10vh;
+  margin: auto;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+mat-label {
+  color: #000000;
+}
+

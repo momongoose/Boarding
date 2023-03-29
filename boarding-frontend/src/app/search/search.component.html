@@ -1,0 +1,46 @@
+<!--
+  Hier werde ich ein Input auswahl Feld mit autocomplete machen und ein Fentser,
+  worin alle geräte von der jeweiligen Person angezeigt wird und dazu,
+  darf Groß und Kleinschreibung keine Rolle spielen
+-->
+<button class="undo" (click)="Undo1()">Zurück</button>
+<div class="container">
+  <mat-icon
+    *ngIf="checkN == true"
+    aria-hidden="false"
+    aria-label="Example home icon"
+    class="j"
+    >check</mat-icon
+  >
+  <mat-icon
+    *ngIf="checkN == 'false'"
+    aria-hidden="false"
+    aria-label="Example home icon"
+    class="x"
+    >clear</mat-icon
+  >
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      placeholder="Vorname Nachname"
+      [(ngModel)]="name"
+      aria-label="Name"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+      >
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <button (click)="FormValidation()" class="check">Suchen</button>
+  <div class="disp" *ngIf="hardwareList2.length > 0">
+    <h1 class="hard" *ngFor="let hardware of hardwareList2">{{ hardware }}</h1>
+  </div>
+</div>

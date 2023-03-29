@@ -1,0 +1,139 @@
+.container {
+  max-width: 100%;
+  overflow-y: hidden;
+}
+
+.btn0 {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  font-size: 2vw;
+}
+
+.btn1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 2vw;
+}
+
+.btn2 {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  font-size: 2vw;
+}
+
+.btn3 {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  font-size: 2vw;
+}
+
+.btn4 {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  font-size: 2vw;
+}
+
+button {
+  width: 30%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  color: white;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  border: 1px solid white;
+}
+
+button:hover {
+  transition: ease-in 0.35s;
+  background-color: #2fa2ff;
+  border-color: rgb(1, 1, 1);
+}
+
+.header  {
+  background-color: white;
+  height: 15vh;
+}
+
+.img1 {
+  height: 12vh;
+  width: 15.5vh;
+  padding: 1.5vh 0 0 2vh;
+}
+
+.header2 {
+  height: 15vh;
+  background-color: #0c7da0;
+  text-align: center;
+  border: 1px solid white;
+}
+
+h2 {
+  color: white;
+  font-size: 8vw;
+  position: relative;
+  top: -6.4vh
+}
+
+.icon1 {
+  position: relative;
+  top: 4.5vh;
+  font-size: 10vw;
+  padding-right: 8vw;
+  padding-left: 2vw;
+}
+
+.img2 {
+ margin: 0;
+ padding: auto;
+ object-fit: contain;
+}
+
+body {
+  width: 100%;
+  text-align: center;
+}
+
+.logi {
+  position: relative;
+  top: -5.5vh;
+  right: -75vw;
+  text-align: center;
+  width: 10%;
+  font-size: 20px;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0vw;
+  padding-right: 0vw;
+  color: white;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  border: 1px solid white;
+}
+
+.regi {
+  position: relative;
+  top: -7.5vh;
+  right: -70vw;
+  text-align: center;
+  width: 10%;
+  font-size: 20px;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0vw;
+  padding-right: 0vw;
+  color: white;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  border: 1px solid white;
+}
+

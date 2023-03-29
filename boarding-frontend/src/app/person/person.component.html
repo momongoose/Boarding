@@ -1,0 +1,446 @@
+<div
+  class="container"
+  *ngIf="
+    off !== 5 && another1 == false && another2 == false && another3 == false
+  "
+>
+  <button class="undo1" (click)="Undo3()">Zurück</button>
+  <h1 class="headline">Übergabe</h1>
+  <div>
+    <mat-icon
+      *ngIf="checkN == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkN == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Vorname Nachname" [(ngModel)]="name" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH1 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH1 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Hardware Namen</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:Laptop"
+        [(ngModel)]="hardwareTyp"
+      />
+    </mat-form-field>
+  </div>
+  <div class="arrowRs">
+    <button (click)="ArrowR()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="plus"
+        >east</mat-icon
+      >
+    </button>
+  </div>
+  <div class="arrowLs">
+    <button (click)="ArrowL()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="plus"
+        >west</mat-icon
+      >
+    </button>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH2 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH2 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Seriennummer</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:"
+        [(ngModel)]="hardwareSn"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH3 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH3 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Gerätename</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:"
+        [(ngModel)]="hardwareName"
+      />
+    </mat-form-field>
+  </div>
+  <div class="hard1">
+    <mat-icon
+      *ngIf="checkD == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkD == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field appearance="fill">
+      <mat-label>Übergabe Datum</mat-label>
+      <mat-select [(value)]="selected1">
+        <mat-option value="nein">Heute</mat-option>
+        <mat-option value="ja">Benutzerdefiniert</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="hardI2" *ngIf="selected1 == 'ja'">
+      <mat-icon
+        *ngIf="checkD2 == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkD2 == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="x"
+        >clear</mat-icon
+      >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Datum</mat-label>
+        <input
+          matInput
+          placeholder="z.B.:"
+          [(ngModel)]="customDate"
+        />
+      </mat-form-field>
+    </div>
+    <div class="btn1" *ngIf="check == false">
+      <button mat-raised-button class="sub1" (click)="Submit()">
+        Absenden
+      </button>
+    </div>
+    <div class="btn1" *ngIf="check == true">
+      <button mat-raised-button class="sub1" (click)="getfile()">
+        Herunterladen
+      </button>
+    </div>
+    <div class="best" *ngIf="fin == true">
+      <h1 class="besttxt">Übergabe war Erfolgreich!</h1>
+      <mat-progress-bar
+        class="bar"
+        mode="determinate"
+        [value]="count"
+      ></mat-progress-bar>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="another1 == true && another2 == false && another3 == false">
+  <button class="undo1" (click)="Undo3()">Zurück</button>
+  <h1 class="headline">Hardware +1</h1>
+  <div>
+    <mat-icon
+      *ngIf="checkH1 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH1 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Hardware Namen</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:Laptop"
+        [(ngModel)]="hardwareTyp1"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH2 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH2 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Seriennummer</mat-label>
+      <input matInput placeholder="SN:" [(ngModel)]="hardwareSn1" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH3 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH3 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Gerätenamen</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:"
+        [(ngModel)]="hardwareName1"
+      />
+    </mat-form-field>
+  </div>
+  <div class="arrowL">
+    <button (click)="ArrowL()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="plus"
+        >west</mat-icon
+      >
+    </button>
+  </div>
+  <div class="arrowR">
+    <button (click)="ArrowR()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="plus"
+        >east</mat-icon
+      >
+    </button>
+  </div>
+</div>
+<div class="container" *ngIf="another2 == true && another1 == false && another3 == false">
+  <button class="undo1" (click)="Undo3()">Zurück</button>
+  <h1 class="headline">Hardware +2</h1>
+  <div>
+    <mat-icon
+      *ngIf="checkH1 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH1 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Hardware Namen</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:Laptop"
+        [(ngModel)]="hardwareTyp2"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH2 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH2 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Seriennummer</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:"
+        [(ngModel)]="hardwareSn2"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH3 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH3 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Gerätenamen</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:"
+        [(ngModel)]="hardwareName2"
+      />
+    </mat-form-field>
+  </div>
+  <div class="arrowL">
+    <button (click)="ArrowL()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="plus"
+        >west</mat-icon
+      >
+    </button>
+  </div>
+  <div class="arrowR">
+    <button (click)="ArrowR()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="plus"
+        >east</mat-icon
+      >
+    </button>
+  </div>
+</div>
+<div class="container" *ngIf="another3 == true && another2 == false && another1 == false">
+  <button class="undo1" (click)="Undo3()">Zurück</button>
+  <h1 class="headline">Hardware +3</h1>
+  <div>
+    <mat-icon
+      *ngIf="checkH1 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH1 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Hardware Namen</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:Laptop"
+        [(ngModel)]="hardwareTyp3"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH2 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH2 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Seriennummer</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:"
+        [(ngModel)]="hardwareSn3"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-icon
+      *ngIf="checkH3 == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="j"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkH3 == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="x"
+      >clear</mat-icon
+    >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Gerätenamen</mat-label>
+      <input
+        matInput
+        placeholder="z.B.:"
+        [(ngModel)]="hardwareName3"
+      />
+    </mat-form-field>
+  </div>
+  <div class="arrowL">
+    <button (click)="ArrowL()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="plus"
+        >west</mat-icon
+      >
+    </button>
+  </div>
+  <div class="arrowR">
+    <button (click)="ArrowR()">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="plus"
+        >east</mat-icon
+      >
+    </button>
+  </div>
+</div>

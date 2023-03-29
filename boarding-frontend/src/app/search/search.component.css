@@ -1,0 +1,80 @@
+h1 {
+  color: black;
+  font-size: 100px;
+}
+
+.undo {
+  font-size: 28px;
+  position: absolute;
+  left: 3vw;
+  top: 3vh;
+}
+
+mat-form-field {
+  font-size: 24px;
+  width: 25vw;
+  text-align: center;
+  background-color: white;
+}
+
+.check {
+  margin: auto;
+  display: flex;
+  font-size: 28px;
+}
+
+.x {
+  padding-right: 2vw;
+  color: red;
+  font-size: 50px;
+}
+
+.hard {
+  font-size: 28px;
+}
+
+.disp {
+  padding-top: 2vh;
+  text-align: center;
+  position: relative;
+  top: 2vh;
+  margin: auto;
+  width: 60%;
+  background: linear-gradient( 132deg, #abcbff, #b1e4fb , #8a91fa);
+  border-radius: 80px;
+  padding-bottom: 2vh;
+}
+
+.j {
+  padding-right: 2vw;
+  color: rgb(27, 192, 27);
+  font-size: 50px;
+}
+
+button {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  color: white;
+}
+
+button:hover {
+  transition: ease-in 0.35s;
+  background-color: #2fa2ff;
+  border-color: rgb(1, 1, 1);
+}
+
+.container {
+  padding-top: 20vh;
+  text-align: center;
+  position: relative;
+  top: 10vh;
+  margin: auto;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}

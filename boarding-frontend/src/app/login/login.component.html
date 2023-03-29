@@ -1,0 +1,27 @@
+
+<div class="container">
+  <button class="undo1" (click)="Undo()">Zurück</button>
+  <div class="bg1">
+    <mat-form-field appearance="fill">
+      <mat-label>E-Mail</mat-label>
+      <input matInput [(ngModel)]="mail" type="email">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Passwort</mat-label>
+      <input (keydown.enter)="Submit()" matInput [(ngModel)]="pas" type="password">
+    </mat-form-field>
+    <div>
+      <button mat-raised-button class="sub1" (click)="Submit()">Anmeldung</button>
+    </div>
+  </div>
+  <div class="best" *ngIf="complete == true">
+    <h1 class="besttxt">Anmeldung war Erfolgreich!</h1>
+    <mat-progress-bar
+      class="bar"
+      mode="determinate"
+      [value]="count"
+    ></mat-progress-bar>
+  </div>
+</div>
+
+

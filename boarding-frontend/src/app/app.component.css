@@ -1,0 +1,112 @@
+
+.conta{
+  background: linear-gradient( 132deg, #abcbff, #b1e4fb , #8a91fa);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+}
+
+.btn1 {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  font-size: 44px;
+}
+
+.btn2 {
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  font-size: 44px;
+}
+
+.csv {
+  margin: auto;
+  position: relative;
+  top: 25vh;
+}
+
+.undo {
+  font-size: 28px;
+  position: relative;
+  left: 3vw;
+  top: 3vh;
+}
+
+button {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  background-color: #84f0f8;
+  border-color: #029797;
+  transition: ease-in 0.3s;
+}
+
+button:hover {
+  transition: ease-in 0.35s;
+  background-color: #2fa2ff;
+  border-color: rgb(1, 1, 1);
+}
+
+.OnForm {
+  text-align: center;
+}
+
+.OffForm {
+  text-align: center;
+}
+
+.undo1 {
+  font-size: 28px;
+  position: fixed;
+  left: 3vw;
+  top: 3vh;
+}
+
+.undo2 {
+  font-size: 28px;
+  position: fixed;
+  left: 3vw;
+  top: 3vh;
+}
+
+.sub1 {
+  font-size: 30px;
+}
+
+.sub2 {
+  font-size: 30px;
+}
+
+mat-form-field {
+  font-size: 24px;
+  width: 30vw;
+  background-color: #FFF;
+}
+
+.bg1 {
+  position: relative;
+  top: 10vh;
+  margin: auto;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.bg2 {
+  position: relative;
+  top: 10vh;
+  margin: auto;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+mat-label {
+  color: #000000;
+}
+

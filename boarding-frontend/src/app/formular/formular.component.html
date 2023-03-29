@@ -1,0 +1,235 @@
+<div class="container">
+  <button class="undo1" (click)="Undo3()">Zurück</button>
+  <div class="bg1">
+    <!--<h1>Einzel Personen</h1>-->
+    <div class="lifelog">
+      <!--<mat-icon
+      *ngIf="checkO == true"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="jo"
+      >check</mat-icon
+    >
+    <mat-icon
+      *ngIf="checkO == 'false'"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      class="xo"
+      >clear</mat-icon
+    >-->
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="abt">
+      <mat-radio-button class="lifebox" value="department1" (change)="BuildMail()">AbteilungA</mat-radio-button>
+      <mat-radio-button  class="logbox" value="department2" (change)="BuildMail()">AbteilungB</mat-radio-button>
+    </mat-radio-group>
+    </div>
+    <div class="first1">
+      <mat-icon
+        *ngIf="checkV == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkV == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="x"
+        >clear</mat-icon
+      >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Vorname</mat-label>
+        <input matInput placeholder="Vorname" (change)="BuildMail()" [(ngModel)]="firstname" />
+      </mat-form-field>
+    </div>
+    <div class="last1">
+      <mat-icon
+        *ngIf="checkN == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkN == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="x"
+        >clear</mat-icon
+      >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nachname</mat-label>
+        <input matInput placeholder="Nachname" (change)="BuildMail()" [(ngModel)]="lastname" />
+      </mat-form-field>
+    </div>
+    <div class="first1">
+      <mat-icon
+        *ngIf="checkM == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkM == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="x"
+        >clear</mat-icon
+      >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>E-Mail Adresse</mat-label>
+        <input matInput (change)="FormValidation()" placeholder="vorname.nachname@organisation.at" [(ngModel)]="mail" />
+      </mat-form-field>
+    </div>
+    <div class="first1">
+      <mat-icon
+        *ngIf="checkB == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkB == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="x"
+        >clear</mat-icon
+      >
+      <mat-form-field appearance="fill">
+        <mat-label>Geburtsdatum</mat-label>
+        <input matInput (change)="FormValidation()" [formControl]="Datum" [matDatepicker]="picker" (dateChange)="addEventBirthday($event)" [min]="minDate" [max]="maxDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="first1">
+      <mat-icon
+        *ngIf="checkA == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkA == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="x"
+        >clear</mat-icon
+      >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Tätigkeitsbeschreibung</mat-label>
+        <input matInput (change)="FormValidation()" placeholder="Abteilung" [(ngModel)]="department" />
+      </mat-form-field>
+    </div>
+    <div class="first1">
+      <mat-icon
+        *ngIf="checkVer == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkVer == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >more_horiz</mat-icon
+      >
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Verteiler/Sonstiges</mat-label>
+        <input matInput (change)="FormValidation()" placeholder="personal@organisation.at, ..." [(ngModel)]="distribution" />
+      </mat-form-field>
+    </div>
+    <div class="first1">
+      <mat-icon
+        *ngIf="checkD == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkD == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="x"
+        >clear</mat-icon
+      >
+      <mat-form-field appearance="fill">
+        <mat-label *ngIf="OnB == 3">Eintrittsdatum</mat-label>
+        <mat-label *ngIf="OffB == 3">Datum der Zugangssperre</mat-label>
+        <input matInput [formControl]="Datum" [matDatepicker]="pick" (dateChange)="addEventDate($event)" [min]="minDa" [max]="maxDa">
+        <mat-datepicker-toggle matSuffix [for]="pick"></mat-datepicker-toggle>
+        <mat-datepicker #pick></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="hard1">
+      <mat-icon
+        *ngIf="checkH == true"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="j"
+        >check</mat-icon
+      >
+      <mat-icon
+        *ngIf="checkH == 'false'"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="x"
+        >clear</mat-icon
+      >
+      <mat-form-field appearance="fill">
+        <mat-label>Hardware</mat-label>
+        <mat-select (selectionChange)="FormValidation()" [(value)]="selected1">
+          <mat-option (change)="FormValidation()" value="ja">Ja</mat-option>
+          <mat-option (change)="FormValidation()" value="nein">Nein</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="hardI2" *ngIf="selected1 == 'ja'">
+      <section class="hardware-section">
+        <mat-checkbox (change)="FormValidation()" class="kekbox2" [(ngModel)]="handy"
+          >Mobiltelefon</mat-checkbox
+        >
+        <mat-checkbox (change)="FormValidation()" class="kekbox2" [(ngModel)]="laptop">Laptop</mat-checkbox>
+        <mat-checkbox (change)="FormValidation()" class="kekbox2" [(ngModel)]="tablet">Tablet</mat-checkbox>
+      </section>
+      <section class="hardware-section2">
+        <mat-checkbox (change)="FormValidation()" class="kekbox2" [(ngModel)]="headset"
+          >Headset</mat-checkbox
+        >
+        <mat-checkbox (change)="FormValidation()" class="kekbox2" [(ngModel)]="docking"
+          >Docking-Station</mat-checkbox
+        >
+        <mat-checkbox (change)="FormValidation()" class="kekbox2" [(ngModel)]="monitor"
+          >Monitor</mat-checkbox
+        >
+      </section>
+      <section class="hardware-section2">
+        <mat-checkbox (change)="FormValidation()" class="kekbox2" [(ngModel)]="portal"
+          >Portal Zugang</mat-checkbox
+        >
+        <mat-checkbox (change)="FormValidation()" class="kekbox2" [(ngModel)]="cloud"
+          >Lifebrain Cloud</mat-checkbox
+        >
+      </section>
+    </div>
+    <div>
+      <button mat-raised-button class="sub1" (click)="SendFormData()">
+        Absenden
+      </button>
+    </div>
+    <div class="best" *ngIf="fin == true">
+      <h1 class="besttxt">Registrierung war Erfolgreich!</h1>
+      <mat-progress-bar
+        class="bar"
+        mode="determinate"
+        [value]="count"
+      ></mat-progress-bar>
+    </div>
+  </div>
+</div>

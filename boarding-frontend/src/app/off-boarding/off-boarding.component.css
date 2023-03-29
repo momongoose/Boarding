@@ -1,0 +1,142 @@
+
+.btn1 {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  font-size: 44px;
+  border: 1px, solid, white;
+}
+
+.btn2 {
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  font-size: 44px;
+  border: 1px, solid, white;
+}
+
+.csv {
+  margin: auto;
+  position: relative;
+  top: 25vh;
+}
+
+.undo {
+  font-size: 28px;
+  position: relative;
+  left: 3vw;
+  top: 3vh;
+}
+
+button {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  color: white;
+}
+
+button:hover {
+  transition: ease-in 0.35s;
+  background-color: #2fa2ff;
+  border-color: rgb(1, 1, 1);
+}
+
+.OnForm {
+  text-align: center;
+}
+
+.OffForm {
+  text-align: center;
+}
+
+@media (max-width:1900px) {
+  .btn1 {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    font-size: 44px;
+    border: 1px, solid, white;
+  }
+
+  .btn2 {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    font-size: 44px;
+    border: 1px, solid, white;
+  }
+}
+
+img {
+  margin-left: 10%;
+}
+
+.Logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 190px;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+}
+
+.undo1 {
+  font-size: 28px;
+  position: fixed;
+  left: 3vw;
+  top: 3vh;
+}
+
+.undo2 {
+  font-size: 28px;
+  position: fixed;
+  left: 3vw;
+  top: 3vh;
+}
+
+.sub1 {
+  font-size: 30px;
+}
+
+.sub2 {
+  font-size: 30px;
+}
+
+mat-form-field {
+  font-size: 24px;
+  width: 30vw;
+  background-color: #FFF;
+}
+
+.bg1 {
+  position: relative;
+  top: 10vh;
+  margin: auto;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.bg2 {
+  position: relative;
+  top: 10vh;
+  margin: auto;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+mat-label {
+  color: #000000;
+}
+

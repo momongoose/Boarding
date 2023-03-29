@@ -1,0 +1,76 @@
+.bg1 {
+  position: relative;
+  margin: auto;
+  top: 30vh;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  text-align: center;
+}
+
+mat-form-field {
+  font-size: 24px;
+  width: 30vw;
+  background-color: #FFF;
+}
+
+
+.sub1 {
+  font-size: 30px;
+}
+
+.undo1 {
+  font-size: 28px;
+  position: fixed;
+  left: 3vw;
+  top: 3vh;
+}
+button {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  color: white;
+}
+
+button:hover {
+  transition: ease-in 0.35s;
+  background-color: #2fa2ff;
+  border-color: rgb(1, 1, 1);
+}
+
+.bar {
+  position: relative;
+  top: -4.5vh;
+}
+
+.besttxt {
+  position: relative;
+  top: 1vh;
+}
+
+.best {
+  text-align: center;
+  position: absolute;
+  top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 40%;
+  color: #000000;
+  background-color: rgb(137, 248, 137);
+  border-radius: 40px;
+  padding-top: 3vh;
+  padding-bottom: -1vh;
+}
+
+@media (max-width:1900px) {
+  .bar {
+    position: relative;
+    top: -7.5vh;
+  }
+}

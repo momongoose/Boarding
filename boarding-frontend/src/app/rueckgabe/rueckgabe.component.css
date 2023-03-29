@@ -1,0 +1,99 @@
+.container {
+  padding-top: 20vh;
+  text-align: center;
+  position: relative;
+  top: 10vh;
+  margin: auto;
+  width: 40%;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+h1 {
+  font-size: 30px;
+  color: #1b80d3;
+  padding-bottom: 5vh;
+}
+
+button {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  color: white;
+}
+
+button:hover {
+  transition: ease-in 0.35s;
+  background-color: #2fa2ff;
+  border-color: rgb(1, 1, 1);
+}
+
+.btn1 {
+  padding-top: 5vh;
+}
+
+@media (max-width:1900px) {
+  .container{
+    padding-top: 5vh;
+    padding-bottom: 8vh;
+    top: 0vh;
+  }
+}
+
+
+.best {
+  position: relative;
+  top: 2vh;
+  margin: auto;
+  width: 80%;
+  color: #000000;
+  background-color: rgb(137, 248, 137);
+  border-radius: 40px;
+  padding-top: 1vh;
+}
+
+
+.x {
+  padding-right: 2vw;
+  color: red;
+  font-size: 50px;
+}
+
+.bar {
+  position: relative;
+  top: -5vh;
+}
+
+.j {
+  padding-right: 2vw;
+  color: rgb(27, 192, 27);
+  font-size: 50px;
+}
+
+.undo1 {
+  font-size: 28px;
+  position: fixed;
+  left: 3vw;
+  top: 3vh;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  background-color: #0c7da0;
+  border: 1px, solid, white;
+  transition: ease-in 0.3s;
+  color: white;
+}
+
+mat-form-field {
+  font-size: 24px;
+  width: 25vw;
+  text-align: center;
+  background-color: white;
+}
+
+.sub1 {
+  font-size: 30px;
+}

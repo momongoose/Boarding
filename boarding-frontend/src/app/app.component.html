@@ -1,0 +1,40 @@
+<div class="conta">
+  <div *ngIf="login == true">
+    <app-login></app-login>
+  </div>
+  <!--<div *ngIf="register == true">
+    <app-register></app-register>
+  </div>-->
+  <div *ngIf="on == 0 && off == 0">
+    <app-home></app-home> <!--app-home-->
+  </div>
+  <div *ngIf="on == 1">
+    <app-on-boarding></app-on-boarding>
+  </div>
+  <div *ngIf="off == 1">
+    <app-off-boarding></app-off-boarding>
+  </div>
+  <div *ngIf="history == true">
+    <app-history></app-history>
+  </div>
+  <div class="csvBox" *ngIf="on == 2 || off == 2 || off == 4">
+    <app-file-upload></app-file-upload>
+  </div>
+  <div *ngIf="on == 4">
+    <app-person></app-person>
+  </div>
+  <div *ngIf="check == 1">
+    <app-uebergabeprotokoll></app-uebergabeprotokoll>
+  </div>
+  <div *ngIf="check == 2">
+    <app-rueckgabe></app-rueckgabe>
+  </div>
+  <div *ngIf="check == 3">
+    <app-search></app-search>
+  </div>
+  <div class="OnForm" *ngIf="on == 3 || off == 3">
+    <app-formular></app-formular>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="header">
+    <img src="assets/images/png.png" width="161" class="img1" />
+    <button mat-raised-butto class="logi" (click)="Login()">Anmeldung</button>
+    <!--<button mat-raised-butto class="regi" (click)="Register()">Registrierung</button>-->
+  </div>
+  <div class="header2">
+    <h2 class="htext">
+      AbteilungA
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon1"
+        >swap_horiz</mat-icon
+      >
+      AbteilungB
+    </h2>
+  </div>
+  <body class="body">
+    <img src="assets/images/png.png" width="100%" class="img2" />
+    <div class="button1" *ngIf="role == 1 || role == 3">
+      <button mat-raised-button class="btn1" (click)="Onboarding()">
+        ONBOARD
+      </button>
+    </div>
+    <div class="button2" *ngIf="role == 1 || role == 3">
+      <button mat-raised-button class="btn2" (click)="Offboarding()">
+        OFFBOARD
+      </button>
+    </div>
+    <div class="button3" *ngIf="role == 1 || role == 3">
+      <button mat-raised-button class="btn3" (click)="Verlauf()">
+        VERLAUF
+      </button>
+    </div>
+    <div class="button3" *ngIf="role == 2">
+      <button mat-raised-button class="btn3" (click)="Uebergabeprotokoll()">
+        ÜBERGABEPROTOKOLL
+      </button>
+    </div>
+    <div class="button4" *ngIf="role == 2">
+      <button mat-raised-button class="btn4" (click)="Search()">
+        DURCHSUCHEN
+      </button>
+    </div>
+  </body>
+</div>
